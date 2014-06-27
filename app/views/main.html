@@ -1,0 +1,65 @@
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">#ExperienceEverything</h1>
+        <p class="splash-subhead">
+            Visual blog of Hannah, aka. herlifeinpixels
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="about">
+    <p class="intro short">
+      Hi, I'm Hannah from in Toronto, Canada. I have a fearless appetite for adrenaline and adventure. #ExperienceEverything is where I share my stories of meeting familar strangers, experiencing unfamilar things.
+    </p>
+    <p class="intro long" ng-show="longIntro">
+      #ExperienceEverything is an experiment on the idea that if we allow ourselves to get a little lost, interesting people and experiences will find us and enlighten our lives. The hard part is getting lost and becoming comfortable with that state of mind. I'm exploring this idea of slowing down and celebrating these small, beautiful moments of being present, and getting lost in doing things we really love.
+    </p>
+    <div ng-click="longIntro = !longIntro" class="intro-toggle">
+      <span ng-if="!longIntro">Learn More</span>
+      <span ng-if="longIntro">Less</span>
+    </div>
+  </div>
+
+  <div class="route">
+    <span class="hexagon yyz here" ng-click='navTo()'>
+      <span class="destination">YYZ</span>
+      <span class="date">Here</span>
+    </span>
+    <span class="hexagon yvr">
+      <span class="destination">YVR</span>
+      <span class="date">June 28</span>
+    </span>
+    <span class="hexagon sea">
+      <span class="destination">SEA</span>
+      <span class="date">July 2</span>
+    </span>
+  </div>
+
+  <div class="entry-wrapper">
+    <div class="entryheader">
+      <img ng-src="entries/day{{day}}/{{data.titleitem.ref}}" />
+      <aside class="quote">{{data.titleitem.caption}}</aside>
+    </div>
+
+    <div class="entry" ng-repeat='item in data.items'>
+      <div class="clip" ng-if='item.type == "video"'>
+        <!-- todo -->
+      </div>
+
+      <div class="sound" ng-if='item.type == "sound"'>
+        <!-- todo -->
+      </div>
+
+      <div class="image">
+        <!-- todo -->
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+  </div>
+</div>
+
+
